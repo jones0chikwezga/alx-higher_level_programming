@@ -3,9 +3,9 @@ import MySQLdb
 import sys
 
 def list_states(username, password, database):
-    # Connect to the MySQL server
+    # Connect to the MySQL server using TCP/IP
     db = MySQLdb.connect(
-        host="localhost",
+        host="127.0.0.1",
         port=3306,
         user=username,
         passwd=password,
@@ -37,3 +37,4 @@ if __name__ == "__main__":
 
     # List states from the database
     list_states(username, password, database)
+
